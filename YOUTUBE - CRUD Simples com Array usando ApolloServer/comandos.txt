@@ -1,0 +1,44 @@
+mutation {
+  create(id: "3", title: "Sapiens", author: "Yuval Harari", publishedAt: 2001) {
+  	id
+    title
+    author
+    publishedAt
+  }
+}
+
+
+
+query {
+  books {
+    id
+    title
+    author
+    publishedAt
+  }
+}
+
+
+mutation {
+  delete(id: "1")
+}
+
+
+
+mutation {
+  update(id: "1", publishedAt: 2014){
+    id
+    title
+    publishedAt
+  }
+}
+
+
+query {
+  book(id: "1") {
+    id
+    title
+    author
+    publishedAt
+  }
+}
