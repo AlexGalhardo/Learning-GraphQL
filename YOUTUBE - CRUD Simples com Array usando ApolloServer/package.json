@@ -2,13 +2,18 @@
   "name": "apollo-graphql",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
+  "engines": {
+    "node": "14.17.5",
+    "npm": "8.1.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "alexgalhardo",
   "license": "ISC",
   "dependencies": {
     "apollo-server": "^2.22.0",

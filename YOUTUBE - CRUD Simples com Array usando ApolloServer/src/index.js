@@ -3,11 +3,11 @@
 const { gql, ApolloServer } = require("apollo-server");
 
 
-//CREATE FAKE DATABASE
+// CREATE FAKE DATABASE
 let books = [];
 
 
-//DEFINE TYPES
+// DEFINE TYPES
 const typeDefs = gql`
   type Book {
     id: ID!
@@ -28,7 +28,7 @@ const typeDefs = gql`
   }
 `;
 
-//DEFINE RESOLVERS
+// DEFINE RESOLVERS
 const resolvers = {
   Query: {
     books: () => {
@@ -66,4 +66,4 @@ const app = new ApolloServer({ typeDefs, resolvers });
 
 
 //RUN SERVER
-app.listen().then(({ url }) => console.log(`Server running on ${url}`));
+app.listen({ port: process.env.PORT || 4000 }).then(({ url }) => console.log(`Server running on ${url}`));
